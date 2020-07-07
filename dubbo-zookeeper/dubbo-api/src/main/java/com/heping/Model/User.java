@@ -1,12 +1,24 @@
 package com.heping.Model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "lb_user")
 public class User implements Serializable {
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int id;
+    @Column(name = "account_name", nullable = false)
     private String account;
+    @Column(name = "password", nullable = false)
     private String password;
+    @Column(name = "name", nullable = false)
     private String name;
+    @Column(name = "sex", nullable = false)
     private String sex;
+    @Column(name = "age", nullable = false)
     private int age;
 
     public String getAccount() {

@@ -8,5 +8,5 @@ public interface UserService {
 
     List<User> getAll();
 
-    User updateById(int id);
+    int updateById(int id);
 }
