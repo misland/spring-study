@@ -22,6 +22,14 @@
 ##### 该项目测试了Bean的生命周期，扫描->销毁的全过程
 #### five
 ##### 该项目用于测试SpringBoot读取配置文件的方式，可以用@Profile进行标注，指示SpringBoot如何进行读取配置文件，也可以通过@PropertySource方式手动引入配置文件，这样也会扫描；其次是测试通过xml文件配置bean，然后通过@ImportResource将配置文件引入，这样定义的类也可以被注入
+
+***
+## aoptest
+### 该项目用于学习AOP相关知识，共有两个项目
+#### one
+##### 该项目用于测试AOP的实现，自己实现类似AOP机制的类，通过JDK生成代理类，从而模仿AOP的过程，也分别测试了不同类型通知获取方法参数的方法
+#### two
+#### 该项目测试代理类的生成方式，springboot默认用CGLIB生成，可以在配置文件中将`spring.aop.proxy-target-class=false`，从而不再默认使用CGLIB，继承接口实现的类用JDK生成，没有继承接口的类，则用CGLIB生成
 ***
 ## springboot-properties
 spring boot读取配置文件的demo，是从别人的仓库中移过来的，为什么要移过来，项目中的readme中有说明
