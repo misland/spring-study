@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heping.dao.UserDao">
+    <resultMap id="user-base" type="user">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+<!--        一个字段可以映射给多个属性，这里指定将数据库中的sex字段映射给sexEnum属性，指定typeHandler进行转换-->
+        <result property="sex" column="sex" typeHandler="com.heping.typehandler.SexTypeHandler"/>
+    </resultMap>
+    <select id="getUser" parameterType="integer" resultType="user" resultMap="user-base">
+        select id,name,sex,age from user where id=#{id}
+    </select>
+
+    <insert id="addUser" parameterType="user">
+--         虽然设置了id为自增，但是mybatis显然没这么智能，这里并不能像数据库管理工具中省略id，必须明白指出要插入的字段和对应的值
+        insert into user (name,age,sex) values(#{name},#{age},#{sex,typeHandler=com.heping.typehandler.SexTypeHandler})
+    </insert>
+</mapper>
