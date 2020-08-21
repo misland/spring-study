@@ -1,10 +1,10 @@
-package com.heping.cfxdemo;
+package com.heping.cxfdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CfxdemoApplicationTests {
+class CxfdemoApplicationTests {
 
     @Test
     void contextLoads() {

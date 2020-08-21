@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.heping</groupId>
-    <artifactId>cfxdemo</artifactId>
+    <artifactId>cxfdemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cfxdemo</name>
+    <name>cxfdemo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,6 +30,7 @@
             <version>3.2.4</version>
         </dependency>
 
+<!--        要加这个package，否则会报没有合法的bean validator异常，不懂-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
