@@ -49,3 +49,7 @@ RESTful demo，也是从别人仓库中移过来的，原地址和原因项目�
 ***
 ## cxfdemo
 ##### 该项目用于学习cxf发布webservice，自定义服务url路径，发布多个服务
+
+***
+## redis-test
+##### 该项目用于学习一下redis在spring中的使用，使用了spring-data-redis包，至于springboot中使用，比较简单，不再重复写测试代码
